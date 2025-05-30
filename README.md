@@ -1,45 +1,51 @@
 
-# Ferreteria E-commerce Project
 
-This is a basic e-commerce application built with Django, simulating a hardware store (ferretería) where users can browse products, add them to a shopping cart, and place orders.
+# Proyecto de E-commerce: Ferretería
 
-## Features
+Esta es una aplicación básica de e-commerce construida con Django, que simula una ferretería donde los usuarios pueden explorar productos, añadirlos a un carrito de compras y realizar pedidos.
 
-* **Product Catalog:** Displays a list of available hardware products with images, names, categories, and prices.
-* **Shopping Cart:** Users can add products to a cart, adjust quantities, and remove items.
-* **Order Placement:** A "Colocar Pedido" (Place Order) button finalizes the order, saving it to the database with a "pendiente" (pending) status and emptying the cart.
-* **Basic UI/UX:** Improved user interface for a cleaner and more intuitive Browse and shopping experience.
-* **Static and Media File Handling:** Configured to serve static assets (CSS) and user-uploaded media (product images).
+---
 
-## Technologies Used
+## Características
 
-* **Django:** Web framework for the backend logic.
-* **Python:** Programming language.
-* **SQLite:** Default database for development.
-* **HTML/CSS:** For the front-end structure and styling.
-* **Font Awesome:** For icons (e.g., shopping cart icon).
+* **Catálogo de Productos:** Muestra una lista de productos de ferretería disponibles con imágenes, nombres, categorías y precios.
+* **Carrito de Compras:** Los usuarios pueden añadir productos al carrito, ajustar cantidades y eliminar artículos.
+* **Realización de Pedidos:** Un botón "Colocar Pedido" finaliza la orden, guardándola en la base de datos con un estado "pendiente" y vaciando el carrito.
+* **UI/UX Básica:** Interfaz de usuario mejorada para una experiencia de navegación y compra más limpia e intuitiva.
+* **Manejo de Archivos Estáticos y Multimedia:** Configurado para servir activos estáticos (CSS) y contenido multimedia subido por el usuario (imágenes de productos).
 
-## Setup and Installation
+---
 
-Follow these steps to get the project up and running on your local machine.
+## Tecnologías Utilizadas
 
-### 1. Clone the Repository
+* **Django:** Framework web para la lógica del backend.
+* **Python:** Lenguaje de programación.
+* **SQLite:** Base de datos predeterminada para desarrollo.
+* **HTML/CSS:** Para la estructura y el estilo del frontend.
+* **Font Awesome:** Para íconos (por ejemplo, el ícono del carrito de compras).
+
+---
+
+## Configuración e Instalación
+
+Sigue estos pasos para poner el proyecto en funcionamiento en tu máquina local.
+
+### 1. Clonar el Repositorio
 
 ```bash
-git clone <your-repository-url>
-cd ferreteria_project
+git clone https://github.com/Dennjim/E-business.git
+cd E-business
 ```
-*(Replace `<your-repository-url>` with the actual URL of your GitHub repository)*
 
-### 2. Create a Virtual Environment
+### 2. Crear un Entorno Virtual
 
-It's highly recommended to use a virtual environment to manage project dependencies.
+Es altamente recomendable usar un entorno virtual para gestionar las dependencias del proyecto.
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
+### 3. Activar el Entorno Virtual
 
 * **Windows:**
     ```bash
@@ -50,56 +56,59 @@ python -m venv venv
     source venv/bin/activate
     ```
 
-### 4. Install Dependencies
+### 4. Instalar Dependencias
 
-You'll need to install Django and any other libraries your project uses. If you have a `requirements.txt` (recommended for larger projects, but for now we'll assume just Django), you'd use that.
+Necesitarás instalar Django y cualquier otra librería que use tu proyecto.
 
 ```bash
-pip install Django pillow # Pillow is needed for image handling
+pip install Django pillow # Pillow es necesario para el manejo de imágenes
 ```
 
-### 5. Database Migrations
+### 5. Migraciones de la Base de Datos
 
-Apply the database migrations to create the necessary tables.
+Aplica las migraciones de la base de datos para crear las tablas necesarias.
 
 ```bash
 python manage.py makemigrations tienda_app
 python manage.py migrate
 ```
 
-### 6. Create a Superuser (Optional but Recommended)
+### 6. Crear un Superusuario (Opcional pero Recomendado)
 
-This allows you to access the Django admin panel to manage products, categories, etc.
+Esto te permite acceder al panel de administración de Django para gestionar productos, categorías, etc.
 
 ```bash
 python manage.py createsuperuser
 ```
-Follow the prompts to create your username, email, and password.
 
-### 7. Run the Development Server
+Sigue las indicaciones para crear tu nombre de usuario, correo electrónico y contraseña.
+
+### 7. Ejecutar el Servidor de Desarrollo
 
 ```bash
 python manage.py runserver
 ```
 
-### 8. Access the Application
+### 8. Acceder a la Aplicación
 
-Open your web browser and go to:
+Abre tu navegador web y ve a:
 
-* **Product Catalog:** `http://127.0.0.1:8000/`
-* **Django Admin:** `http://127.0.0.1:8000/admin/`
+* **Catálogo de Productos:** `http://127.0.0.1:8000/`
+* **Panel de Administración de Django:** `http://127.0.0.1:8000/admin/`
 
-## Project Structure
+---
+
+## Estructura del Proyecto
 
 ```
 ferreteria_project/
-├── ferreteria_project/  # Main project settings
+├── ferreteria_project/  # Configuración principal del proyecto
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── tienda_app/          # Core e-commerce application
+├── tienda_app/          # Aplicación principal de e-commerce
 │   ├── migrations/
-│   ├── static/          # For app-specific static files (e.g., CSS for this app)
+│   ├── static/          # Para archivos estáticos específicos de la aplicación (ej. CSS)
 │   ├── templates/
 │   │   └── tienda_app/
 │   │       ├── catalogo.html
@@ -111,25 +120,18 @@ ferreteria_project/
 │   ├── models.py
 │   ├── urls.py
 │   └── views.py
-├── media/               # Directory for user-uploaded files (e.g., product images)
-├── venv/                # Python Virtual Environment (ignored by Git)
+├── media/               # Directorio para archivos subidos por el usuario (ej. imágenes de productos)
+├── venv/                # Entorno Virtual de Python (ignorado por Git)
 ├── manage.py
 └── README.md
 └── .gitignore
 ```
 
-## Contributing
+---
 
-Feel free to fork the repository, make improvements, and submit pull requests!
+## Contribuciones
 
-## License
+¡No dudes en hacer un "fork" del repositorio, realizar mejoras y enviar solicitudes de extracción ("pull requests")!
 
-[Specify your license here, e.g., MIT, Apache 2.0, etc. If no license, state "No license specified." For a basic project, MIT is a common choice.]
-```
-
-
-
-
-
-
+---
 
