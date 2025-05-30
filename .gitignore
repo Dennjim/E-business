@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+.vscode/
+
+# Django-specific
+*.log
+local_settings.py
+db.sqlite3
+/media/*
+!/media/.gitkeep # Allows media directory to be committed even if empty
+!/media/**/ # Allows all contents within media/ to be tracked
+
+# IDEs
+.idea/
+.DS_Store
+
+# Operating System Files
+.vscode/
+Thumbs.db

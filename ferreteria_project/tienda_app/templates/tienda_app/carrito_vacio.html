@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito Vacío</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .vacio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+        }
+        .vacio-mensaje {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="vacio-container">
+        <div class="vacio-mensaje">
+            <h1>Tu Carrito está Vacío</h1>
+            <p>No has agregado ningún artículo a tu carrito.</p>
+        </div>
+        <a href="{% url 'catalogo_productos' %}" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Volver al Catálogo</a>
+    </div>
+</body>
+</html>
